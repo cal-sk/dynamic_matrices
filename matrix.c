@@ -44,6 +44,7 @@ int main()
     {
         free(matrix[i]);
     }
+    // free memory
     free(matrix);
     
 }
