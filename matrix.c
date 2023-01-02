@@ -7,14 +7,16 @@ int **create_matrix(int rows, int columns, int values)
     // allocate space for the number of rows in the matrix
     matrix = malloc(sizeof(int *) * rows);
 
-    // allocate space for the number of columns in the matrix
-    for (int i = 0; i < rows; i++)
-        matrix[i] = malloc(sizeof(int) * columns);
-
     // fill each space with a value
     for (int i = 0; i < rows; i++)
+    {
+        // allocate space for the columns
+        matrix[i] = malloc(sizeof(int) * columns);
         for (int l=0; l < columns; l++)
+        {
             matrix[i][l] = values;
+        }     
+    }
 
     // return the matrix
     return matrix;
