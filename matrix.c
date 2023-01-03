@@ -17,7 +17,6 @@ int **create_matrix(int rows, int columns, int values)
             matrix[i][l] = values;
         }     
     }
-
     // return the matrix
     return matrix;
 }
