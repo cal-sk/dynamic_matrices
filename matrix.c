@@ -34,8 +34,14 @@ int main()
     // print the value at each row
     for (int i = 0; i < rows; i++)
     {
-        for (int l=0; l < columns; l++)
-           printf("%d ", matrix[i][l]);
+        for (int l=0; l < columns; l++) {
+            if (l == columns - 1) {
+                printf("[%d] ", matrix[i][l]);
+            } else
+            {
+                printf("[%d], ", matrix[i][l]);
+            }
+        }
         // go to a new line after each row
         printf("\n");
     }
